@@ -1,0 +1,25 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Game.Net.SubNet
+// Assembly: Game, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 6E65E546-90EB-41EE-A5F5-E22CC56BB1AC
+// Assembly location: C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\Managed\Game.dll
+
+using Colossal.Serialization.Entities;
+using System;
+using Unity.Entities;
+
+#nullable disable
+namespace Game.Net
+{
+  [InternalBufferCapacity(0)]
+  public struct SubNet : IBufferElementData, IEquatable<SubNet>, IEmptySerializable
+  {
+    public Entity m_SubNet;
+
+    public SubNet(Entity subNet) => this.m_SubNet = subNet;
+
+    public bool Equals(SubNet other) => this.m_SubNet.Equals(other.m_SubNet);
+
+    public override int GetHashCode() => this.m_SubNet.GetHashCode();
+  }
+}
